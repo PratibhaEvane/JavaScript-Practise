@@ -1,0 +1,39 @@
+.navbar {
+	background: linear-gradient(to left, blue, skyblue);
+}
+.navbar-nav {
+	margin-left: 20px;
+	font-weight: bold;
+}
+.container {
+	margin-top: 2%;
+}
+
+button {
+	width: 170px;
+}
+
+#clock {
+	/* font-size: 50px;
+	width: 50%;
+	height: 20vw;
+	text-align: center;
+	border: 2px solid black;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	padding: 20%; */
+	height: 100px;
+	width: 20%;
+	border: 2px solid;
+	font-size: 10px;
+	text-align: center;
+}
+
+.output {
+	font-weight: bold;
+}
+#definitionList li {
+	font-size: 20px;
+	margin-top: 15px;
+}

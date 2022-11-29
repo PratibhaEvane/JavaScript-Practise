@@ -1,0 +1,16 @@
+<script>
+	let num = +prompt('enter any number here');
+	if (Math.sign(num) != -1 && Math.sign(num) != 0) {
+		for (let i = 1; i <= num; i++) {
+			if (i % 2 == 0) {
+				console.log(i);
+				document.write(i + ' is <b>even</b> number <br>');
+			} else {
+				console.log('odd numbers :' + i);
+				document.write(i + ' is <b>odd</b> number <br>');
+			}
+		}
+	} else {
+		alert('please enter positive and non-zero number');
+	}
+</script>

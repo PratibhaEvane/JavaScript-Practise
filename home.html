@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS-Task</title>
+		<link rel="stylesheet" href="home.css" />
+		<script src="home.js"></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="">
+					<img src="" alt="" />
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/home.html">Home</a>
+						</li><li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/questions.html">Questions</a>
+						</li>
+					</li>
+
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								Dropdown
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Array</a></li>
+								<li><a class="dropdown-item" href="#">String</a></li>
+								<li><a class="dropdown-item" href="#">Object</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form class="d-flex" role="search">
+						<input
+							class="form-control me-2"
+							type="search"
+							placeholder="Search"
+							aria-label="Search"
+						/>
+						<button class="btn btn-outline-success" type="submit">
+							Search
+						</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">No</th>
+						<th scope="col">Task</th>
+						<th scope="col">Perform</th>
+						<th scope="col">Output</th>
+					</tr>
+				</thead>
+				<tbody id="addNewRow">
+					<tr>
+						<th scope="row">1</th>
+						<td> Write a program accept 5 subject marks (HintP=67,C=87,M=90,H=98,E=88) and calculate total marks and 
+							percentage.</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="percent()">
+								Calculate
+							</button>
+						</td>
+						<td id="calculate" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>Swap two numbers</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="swap()">
+								Swap
+							</button>
+						</td>
+						<td id="swap" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>Find area of :</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="areaOfCircle()"
+							>
+								Circle
+							</button>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="areaOfTriangle()"
+							>
+								Triangle
+							</button>
+						</td>
+						<td id="findArea" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">4</th>
+						<td>
+							Write a program to print given format using single print function.
+							<br />
+							Code Better <br />
+							“Code Better” <br />
+							‘Code Better’
+						</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="print()">
+								Print
+							</button>
+						</td>
+						<td id="printCodeBetter" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">5</th>
+						<td>Write a program to find out square of given number.</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="findSqaureOfNumber()"
+							>
+								Sqaure of Number
+							</button>
+						</td>
+						<td id="findSqaureOfNumber" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">6</th>
+						<td>Write a program to find out simple interest (SI).</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="simpleInterest()"
+							>
+								Simple Interest
+							</button>
+						</td>
+						<td id="simpleInterest" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">7</th>
+						<td>calculate sum of given digits number</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="sumOfDigit()"
+							>
+								Sum of Digit
+							</button>
+						</td>
+						<td id="sumOfDigit" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">8</th>
+						<td>calculate Gross Salary</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="grossSalary()"
+							>
+								Gross Salary
+							</button>
+						</td>
+						<td id="grossSalary" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">9</th>
+						<td>calculate Average of given three numbers</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="averageOfNumbers()"
+							>
+								Average Number
+							</button>
+						</td>
+						<td id="averageOfNumbers" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">10</th>
+						<td>Display the given number in reverse order</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="reverseOrder()"
+							>
+								Reverse
+							</button>
+						</td>
+						<td id="reverseOrder" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">11</th>
+						<td>count number of notes (rupees) in given amount</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="numberOfNotes()"
+							>
+								Count
+							</button>
+						</td>
+						<td id="numberOfNotes" class="output"></td>
+					</tr>
+					<tr>
+						<th scope="row">12</th>
+						<td>calculates first number is divisible by second or not.</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="numberIsDivisible()"
+							>
+								Calculate
+							</button>
+						</td>
+						<td id="numberIsDivisible"></td>
+					</tr>
+					<tr>
+						<th scope="row">13</th>
+						<td>given number is even or odd</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="evenOdd()">
+								Even/Odd
+							</button>
+						</td>
+						<td id="evenOdd"></td>
+					</tr>
+					<tr>
+						<th scope="row">14</th>
+						<td>calculate biggest number out of two numbers.</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="biggestNumber()"
+							>
+								biggest Number
+							</button>
+						</td>
+						<td id="biggestNumber"></td>
+					</tr>
+					<tr>
+						<th scope="row">15</th>
+						<td>calculate biggest number out of three numbers.</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="biggestNumberAmongThree()"
+							>
+								biggest Number
+							</button>
+						</td>
+						<td id="biggestNumberAmongThree"></td>
+					</tr>
+					<tr>
+						<th scope="row">16</th>
+						<td>given number is palindrome number or not.</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="palindromeNumber()"
+							>
+								Palindrome Number
+							</button>
+						</td>
+						<td id="palindromeNumber"></td>
+					</tr>
+					<tr>
+						<th scope="row">17</th>
+						<td>Draw Triangle Shape</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="triangleShape()"
+							>
+								Triangle Shape
+							</button>
+						</td>
+						<td id="triangleShape"></td>
+					</tr>
+					<tr>
+						<th scope="row">18</th>
+						<td>given number is Armstrong number or not.</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="armstrongNumber()"
+							>
+								Armstrong Number
+							</button>
+						</td>
+						<td id="armstrongNumber"></td>
+					</tr>
+					<tr>
+						<th scope="row">19</th>
+						<td>check biggest & Smallest digit of given number</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="biggestDigit()"
+							>
+								Biggest&Smallest Digit
+							</button>
+						</td>
+						<td id="biggestDigit"></td>
+					</tr>
+					<tr>
+						<th scope="row">20</th>
+						<td>person is eligible for voting or not</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="eligibleForVoting()"
+							>
+								Eligible For Voting
+							</button>
+						</td>
+						<td id="eligibleForVoting"></td>
+					</tr>
+					<tr>
+						<th scope="row">21</th>
+						<td>calculate given number positive or negative or zero</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="checkTheNumber()"
+							>
+								check the number
+							</button>
+						</td>
+						<td id="checkTheNumber"></td>
+					</tr>
+					<tr>
+						<th scope="row">22</th>
+						<td>character is in lowercase or uppercase</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="checkCharacter()"
+							>
+								Check Character
+							</button>
+						</td>
+						<td id="checkCharacter"></td>
+					</tr>
+					<tr>
+						<th scope="row">23</th>
+						<td>calculate whether year is leap year or not.</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="leapYear()"
+							>
+								Leap Year
+							</button>
+						</td>
+						<td id="leapYear"></td>
+					</tr>
+					<tr>
+						<th scope="row">24</th>
+						<td>whether a character is vowel or consonant</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="vowelConsonant()"
+							>
+								Vowel or Consonant
+							</button>
+						</td>
+						<td id="vowelConsonant"></td>
+					</tr>
+					<tr>
+						<!-- <th scope="row">25</th>
+						<td>Program to show day of week according to user input</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="showDay()">
+								Show Day
+							</button>
+						</td>
+						<td id="showDay"></td>
+					</tr> -->
+					</tbody>
+
+					<tr>
+						<th scope="row">25</th>
+						<td>Show the grade accoding to percentage of 5 marks</td>
+						<td>
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="showGrade()"
+							>
+								Show Grade
+							</button>
+						</td>
+						<td id="showGrade"></td>
+					</tr>
+					<tr>
+						<th scope="row">26</th>
+						<td>Generate electricity Bill</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="generateElectricityBill()">Generate Bill</button>
+						</td>
+						<td id="generateElectricityBill"></td>
+					</tr> 
+					<tr>
+						<th scope="row">27</th>
+						<td>Calculate Gross Salary</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="calculateGrossSalary()">Calculate</button>
+						</td>
+						<td id="calculateGrossSalary"></td>
+					</tr>
+					<tr>
+						<th scope="row">28</th>
+						<td> program to print “Code Better” five times by 
+							using loop.</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="printCodeBetter()">print Code Better</button>
+						</td>
+						<td id="printCodeBetter"></td>
+					</tr> 
+					<tr>
+						<th scope="row">29</th>
+						<td>Program to print n natural number. 
+						</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="printNaturalNumber()">Print Natural Num</button>
+						</td>
+						<td id="printNaturalNumber"></td>
+					</tr>
+					<tr>
+						<th scope="row">30</th>
+						<td> program to calculate factorial of a given number</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="factorialNumber()">Factorial Num</button>
+						</td>
+						<td id="factorialNumber"></td>
+					</tr> 
+					<tr>
+						<th scope="row">31</th>
+						<td> calculate square from 1-10 numbers</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="calculateSquare()">Calculate sqaure</button>
+						</td>
+						<td id="calculateSquare"></td>
+					</tr>
+					<tr>
+						<th scope="row">32</th>
+						<td> program to print table of any given numbers. </td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="printTable()">Print Table</button>
+						</td>
+						<td id="printTable"></td>
+					</tr>
+					<tr>
+						<th scope="row">33</th>
+						<td> program that accepts a number from user 
+							calculate factor of a given number.
+							</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="factorOfNumber()">Factor of Num</button>
+						</td>
+						<td id="factorOfNumber"></td>
+					</tr><tr>
+						<th scope="row">34</th>
+						<td>accepts a number from user check given number is perfect number or not. </td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="perfectNumber()">Perfect Number</button>
+						</td>
+						<td id="perfectNumber"></td>
+					</tr>
+					<tr>
+						<th scope="row">35</th>
+						<td> program to print <a href="http://127.0.0.1:5501/defintion.html">Fibonacci Series</a> .
+						</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="fibonacciSeries()">Fibonacci Series</button>
+						</td>
+						<td id="fibonacciSeries"></td>
+					</tr>
+					<tr>
+						<th scope="row">36</th>
+						<td> program to calculate sum of squares of n <a href="http://127.0.0.1:5501/defintion.html">natural number</a> </td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="squareOfNaturalNumbers()">Square Of Natural Numbers</button>
+						</td>
+						<td id="squareOfNaturalNumbers"></td>
+					</tr>
+					<tr>
+						<th scope="row">37</th>
+						<td> program to accept n number from user and showhow many number are even or odd.
+						</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="evenOddNumbers()">Even Odd Numbers</button>
+						</td>
+						<td id="evenOddNumbers"></td>
+					</tr>
+					<tr>
+						<th scope="row">38</th>
+						<td> program to find LCM (Least Common Multiple) of two numbers</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="lCM()">LCM</button>
+						</td>
+						<td id="lCM"></td>
+					</tr>
+					<tr>
+						<th scope="row">39</th>
+						<td>program to find HCF (Highest Common Factor) of two numbers</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="hCF()">HCF</button>
+						</td>
+						<td id="hCF"></td>
+					</tr>
+					<tr>
+						<th scope="row">40</th>
+						<td> program that accepts a number from user and 
+							check given number is prime number or not</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="primeNumber()">Prime Number</button>
+						</td>
+						<td id="primeNumber"></td>
+					</tr><tr>
+						<th scope="row">41</th>
+						<td> program to calculate sum of below series: 
+							1-2+3-4+5-6+7-8......n. 
+							</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="calculateSumofSeries()">Calculate</button>
+						</td>
+						<td id="calculateSumofSeries"></td>
+					</tr>
+					<tr>
+						<th scope="row">42</th>
+						<td> program to print prime numbers from 1-100. </td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="primeNumberSeries()">primeNumberSeries</button>
+						</td>
+						<td id="primeNumberSeries"></td>
+					</tr> 
+					<tr>
+						<th scope="row">43</th>
+						<td> program to print Armstrong numbers from 101-1000</td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="printArmstrongNumbers()">printArmstrongNum</button>
+						</td>
+						<td id="printArmstrongNumbers"></td>
+					</tr>
+					<tr>
+						<th scope="row">44</th>
+						<td>program to print “Code Better” five times without loop </td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="printTextWithoutLoop()">Print</button>
+						</td>
+						<td id="printTextWithoutLoop"></td>
+					</tr>
+					<!-- <tr>
+						<th scope="row"></th>
+						<td></td>
+						<td>
+							<button type="button" class="btn btn-primary" onclick="print()">Print</button>
+						</td>
+						<td id="printCodeBetter"></td>
+					</tr> -->
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
